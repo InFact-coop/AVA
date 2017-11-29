@@ -18,3 +18,18 @@ a {
 button {
   font-family: var(--sans-serif);
 }
+
+.arial {
+  font-family: arial, helvetica, sans-serif;
+}
+
+.burger {
+  background: url('./assets/burger.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.b--dark-teal {
+  border-color: var(--dark-teal);
+}

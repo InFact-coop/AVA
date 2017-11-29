@@ -14,6 +14,7 @@ import Routes.Government exposing (..)
 import Routes.Disclosure exposing (..)
 import Routes.Thanks exposing (..)
 import Routes.Navbar exposing (..)
+import Components.Heading exposing (..)
 
 
 view : Model -> Html Msg
@@ -44,5 +45,6 @@ view model =
     in
         div []
             [ navbar model
+            , heading model
             , page
             ]
