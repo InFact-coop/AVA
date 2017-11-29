@@ -12,3 +12,7 @@ body {
 button {
   font-family: var(--sans-serif);
 }
+
+.m0-auto{
+  margin: 0 auto;
+}
