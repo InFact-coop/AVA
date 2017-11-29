@@ -6,9 +6,13 @@ import Html exposing (..)
 -- My Elm Files
 
 import Types exposing (..)
-import Routes.Home exposing (..)
-import Routes.PageOne exposing (..)
-import Routes.PageTwo exposing (..)
+import Routes.Welcome exposing (..)
+import Routes.Intro exposing (..)
+import Routes.AboutYou exposing (..)
+import Routes.Journey exposing (..)
+import Routes.Government exposing (..)
+import Routes.Disclosure exposing (..)
+import Routes.Thanks exposing (..)
 import Routes.Navbar exposing (..)
 
 
@@ -17,14 +21,26 @@ view model =
     let
         page =
             case model.route of
-                HomeRoute ->
-                    home model
+                WelcomeRoute ->
+                    welcome model
 
-                PageOneRoute ->
-                    pageOne model
+                IntroRoute ->
+                    intro model
 
-                PageTwoRoute ->
-                    pageTwo model
+                AboutYouRoute ->
+                    aboutYou model
+
+                JourneyRoute ->
+                    journey model
+
+                GovernmentRoute ->
+                    government model
+
+                DisclosureRoute ->
+                    disclosure model
+
+                ThanksRoute ->
+                    thanks model
     in
         div []
             [ navbar model
