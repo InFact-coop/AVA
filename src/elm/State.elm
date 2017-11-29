@@ -8,7 +8,7 @@ import Types exposing (..)
 
 initModel : Model
 initModel =
-    { route = HomeRoute
+    { route = WelcomeRoute
     , userInput = ""
     }
 
@@ -20,17 +20,29 @@ initModel =
 getRoute : String -> Route
 getRoute hash =
     case hash of
-        "#home" ->
-            HomeRoute
+        "#welcome" ->
+            WelcomeRoute
 
-        "#pageone" ->
-            PageOneRoute
+        "#intro" ->
+            IntroRoute
 
-        "#pagetwo" ->
-            PageTwoRoute
+        "#aboutYou" ->
+            AboutYouRoute
+
+        "#journey" ->
+            JourneyRoute
+
+        "#government" ->
+            GovernmentRoute
+
+        "#disclosure" ->
+            DisclosureRoute
+
+        "#thanks" ->
+            ThanksRoute
 
         _ ->
-            HomeRoute
+            WelcomeRoute
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
