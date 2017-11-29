@@ -6,7 +6,13 @@ body {
      they aren't properly supported by all browsers yet so postcss turns them into normal css for you
   */
   font-family: var(--sans-serif);
+  color: var(--dark-gray);
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-teal);
 }
 
 button {
