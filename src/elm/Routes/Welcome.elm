@@ -9,7 +9,7 @@ welcome : Model -> Html Msg
 welcome model =
     div [ class "pa4" ]
         [ div [ class "pb3" ]
-            [ img [ class "br1", src "./assets/happywomen.jpg" ]
+            [ img [ class "br1 ", src "./assets/happywomen.jpg" ]
                 []
             ]
         , div [ class "bg-light-gray pa3" ]
