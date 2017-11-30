@@ -92,6 +92,13 @@ button {
   border-bottom: 1px solid var(--dark-gray);
 }
 
+
+input:checked + label {
+  background-color: #88347d;
+  color: white;
+  font-weight: bold;
+  border: none;
+
 .checked {
   background: url('./assets/svg/tick.svg');
   background-repeat: no-repeat;
