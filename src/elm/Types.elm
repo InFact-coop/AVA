@@ -18,6 +18,7 @@ type Route
 
 type alias Model =
     { route : Route
+    , acceptQuiz : Bool
     , faqs : List ( String, String, Bool )
     }
 
@@ -29,3 +30,4 @@ type alias Model =
 type Msg
     = UrlChange Navigation.Location
     | ShowAnswer ( String, String, Bool )
+    | AcceptQuiz Bool
