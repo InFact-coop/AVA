@@ -8,7 +8,7 @@ import Types exposing (..)
 
 initModel : Model
 initModel =
-    { route = WelcomeRoute
+    { route = GovernmentRoute
     , faqs =
         [ ( "Why do we need this information?"
           , "We are looking for for testimonies that reflect the diversity of Britain today. We hope to take your messages to Parliament when they discuss the DV Bill later this year"
@@ -58,10 +58,10 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         UrlChange location ->
-            ( { model | route = (getRoute location.hash) }, Cmd.none )
+            ( { model | route = getRoute location.hash }, Cmd.none )
 
         ShowAnswer qatuple ->
-            ( { model | faqs = (List.map (\n -> findToggledQa n qatuple) model.faqs) }, Cmd.none )
+            ( { model | faqs = List.map (\n -> findToggledQa n qatuple) model.faqs }, Cmd.none )
 
 
 findToggledQa : ( String, String, Bool ) -> ( String, String, Bool ) -> ( String, String, Bool )
