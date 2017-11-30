@@ -19,6 +19,38 @@ button {
   font-family: var(--sans-serif);
 }
 
+
+.m0-auto{
+  margin: 0 auto;
+}
+
+.orange-button {
+  background-color: #ed7707;
+  color: white;
+  display: inline-block;
+  border-color: #d1cbcb;
+  border-radius: .125rem;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  margin: 1rem 0 1rem 0;
+  float: right;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.gray-button {
+  background-color: var(--dark-gray);
+  color: var(--mid-gray);
+  display: inline-block;
+  border-color: var(--mid-gray);
+  border-radius: .125rem;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  margin: 1rem 0 1rem 0;
+  float: right;
+  text-align: center;
+  font-size: 1.25rem;
+  cursor: not-allowed;
+}
+
 .arial {
   font-family: arial, helvetica, sans-serif;
 }
@@ -60,9 +92,14 @@ button {
   border-bottom: 1px solid var(--dark-gray);
 }
 
+
 input:checked + label {
   background-color: #88347d;
   color: white;
   font-weight: bold;
   border: none;
+
+.checked {
+  background: url('./assets/svg/tick.svg');
+  background-repeat: no-repeat;
 }
