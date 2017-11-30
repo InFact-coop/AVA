@@ -63,6 +63,5 @@ button {
 input:checked + label {
   background-color: #88347d;
   color: white;
-  font-weight: bold;
   border: none;
 }
