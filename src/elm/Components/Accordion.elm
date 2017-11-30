@@ -26,7 +26,7 @@ qa qatuple =
         ( question, answer, isDisplayed ) =
             qatuple
     in
-        section [ class "qa pa2" ]
+        section [ class "qa" ]
             [ button [ class "bn question", onClick (ShowAnswer qatuple) ] [ text question ]
             , section [ class <| "answer " ++ qaClass isDisplayed ] [ text answer ]
             ]
