@@ -9,5 +9,8 @@ import Components.Accordion exposing (..)
 
 intro : Model -> Html Msg
 intro model =
-    div [ class "mh2" ]
-        [ accordion model ]
+    div [ class "m2 center" ]
+        [ iframe [ src "https://www.youtube-nocookie.com/embed/VGrBCs_EbZU", class "center db mh2" ] []
+        , accordion model
+        , button [ class "orange-button" ] [ text "Let's go" ]
+        ]
