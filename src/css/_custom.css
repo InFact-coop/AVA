@@ -19,6 +19,7 @@ button {
   font-family: var(--sans-serif);
 }
 
+
 .m0-auto{
   margin: 0 auto;
 }
@@ -30,8 +31,36 @@ button {
   border-color: #d1cbcb;
   border-radius: .125rem;
   padding: 0.75rem 2rem 0.75rem 2rem;
-  margin: 2rem 0 2rem 0;
+  margin: 1rem 0 1rem 0;
   float: right;
   text-align: center;
   font-size: 1.25rem;
 }
+
+.arial {
+  font-family: arial, helvetica, sans-serif;
+}
+
+.burger {
+  background: url('./assets/burger.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: var(--height-2-half);
+}
+
+.b--dark-teal {
+  border-color: var(--dark-teal);
+}
+.bg-dark-teal {
+    background-color: var(--dark-teal);
+}
+
+.pv3half {
+  padding-top: var(--spacing-largeish);
+  padding-bottom: var(--spacing-largeish);
+}
+
+.w2half {
+  width: var(--width-2-half);
+};
