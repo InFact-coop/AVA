@@ -54,3 +54,8 @@ button {
 .ma0-auto{
   margin: 0 auto;
 }
+
+.question {
+  border: 0;
+  border-bottom: 1px solid var(--dark-gray);
+}

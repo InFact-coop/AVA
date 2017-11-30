@@ -4,8 +4,13 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Types exposing (..)
+import Components.Accordion exposing (..)
 
 
 intro : Model -> Html Msg
 intro model =
-    div [] [ text "This is Intro" ]
+    div [ class "m2 center" ]
+        [ iframe [ src "https://www.youtube-nocookie.com/embed/VGrBCs_EbZU", class "center db mh2" ] []
+        , accordion model
+        , button [ class "orange-button" ] [ text "Let's go" ]
+        ]

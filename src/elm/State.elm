@@ -9,7 +9,16 @@ import Types exposing (..)
 initModel : Model
 initModel =
     { route = WelcomeRoute
-    , userInput = ""
+    , faqs =
+        [ ( "Why do we need this information?"
+          , "We are looking for for testimonies that reflect the diversity of Britain today. We hope to take your messages to Parliament when they discuss the DV Bill later this year"
+          , False
+          )
+        , ( "Will I remain anonymous?"
+          , "Lorum Ipsem"
+          , False
+          )
+        ]
     }
 
 
@@ -48,8 +57,16 @@ getRoute hash =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Change newInput ->
-            ( { model | userInput = newInput }, Cmd.none )
-
         UrlChange location ->
-            ( { model | route = getRoute location.hash }, Cmd.none )
+            ( { model | route = (getRoute location.hash) }, Cmd.none )
+
+        ShowAnswer qatuple ->
+            ( { model | faqs = (List.map (\n -> findToggledQa n qatuple) model.faqs) }, Cmd.none )
+
+
+findToggledQa : ( String, String, Bool ) -> ( String, String, Bool ) -> ( String, String, Bool )
+findToggledQa ( mappedQ, mappedA, isMappedToggled ) ( selectedQ, selectedA, isSelectedToggled ) =
+    if selectedQ == mappedQ then
+        ( selectedQ, selectedA, not isSelectedToggled )
+    else
+        ( mappedQ, mappedA, isMappedToggled )
