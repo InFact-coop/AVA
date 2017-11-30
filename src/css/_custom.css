@@ -38,6 +38,10 @@ button {
     background-color: var(--dark-teal);
 }
 
+.bg-light-teal{
+  background-color: var(--light-teal);
+}
+
 .pv3half {
   padding-top: var(--spacing-largeish);
   padding-bottom: var(--spacing-largeish);
@@ -46,3 +50,7 @@ button {
 .w2half {
   width: var(--width-2-half);
 };
+
+.ma0-auto{
+  margin: 0 auto;
+}
