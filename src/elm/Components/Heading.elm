@@ -14,8 +14,14 @@ heading model =
             [ purpleButton model "I need help"
             , purpleButton model "Contact us"
             ]
-        , div [ class "branding" ]
-            [ img [ class "h3 pv3 dib", src "./assets/brand.jpg", alt "AVA" ] []
-            , div [ class "dib burger w3 h3 ba b--dark-teal" ] []
+        , div [ class "branding pv3 flex justify-between items-center" ]
+            [ img [ class "h3 dib ml2", src "./assets/brand.jpg", alt "AVA" ] []
+            , div [ class "" ]
+                [ span [ class "v-mid mr2" ] [ text "MENU" ]
+                , div
+                    [ class "dib burger v-mid mr2 w2half ba b--dark-teal" ]
+                    []
+                ]
             ]
+        , header [ class "bg-dark-teal br2 mh2" ] [ h1 [ class "white f2 ma0 pa2" ] [ text "Make Change" ] ]
         ]
