@@ -19,6 +19,7 @@ initModel =
           , False
           )
         ]
+    , acceptQuiz = False
     }
 
 
@@ -59,6 +60,9 @@ update msg model =
     case msg of
         UrlChange location ->
             ( { model | route = (getRoute location.hash) }, Cmd.none )
+
+        AcceptQuiz bool ->
+            ( { model | acceptQuiz = not model.acceptQuiz }, Cmd.none )
 
         ShowAnswer qatuple ->
             ( { model | faqs = (List.map (\n -> findToggledQa n qatuple) model.faqs) }, Cmd.none )
