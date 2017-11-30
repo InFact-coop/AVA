@@ -20,5 +20,5 @@ welcome model =
                     []
                 ]
             ]
-        , button [ class "bg-orange white b bn br1 pt2 pb2 pl4 pr4 mt3 mb3 fr f4 tc" ] [ text "next" ]
+        , a [ class "orange-button", href "#intro" ] [ text "next" ]
         ]
