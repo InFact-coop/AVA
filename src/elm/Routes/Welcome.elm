@@ -2,6 +2,7 @@ module Routes.Welcome exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Types exposing (..)
 
 
@@ -16,9 +17,25 @@ welcome model =
             [ div [ class "br1 pa3 bg-light-gray b tc dark-gray" ]
                 [ text "I am a survivor and I want to make a change." ]
             , div [ class "br1 tc w2 h2 bg-white m0-auto ba b--mid-gray flex pa1" ]
-                [ img [ src "./assets/svg/tick.svg", class "contain flex justify-center" ]
+                [ div [ class <| "h4 w4 " ++ toggleCheck model.acceptQuiz, onClick (AcceptQuiz model.acceptQuiz) ]
                     []
                 ]
             ]
-        , a [ class "orange-button", href "#intro" ] [ text "next" ]
+        , a [ class <| toggleButton model.acceptQuiz, href "#intro" ] [ text "next" ]
         ]
+
+
+toggleButton : Bool -> String
+toggleButton bool =
+    if bool == True then
+        "orange-button"
+    else
+        "gray-button"
+
+
+toggleCheck : Bool -> String
+toggleCheck bool =
+    if bool == True then
+        "checked"
+    else
+        ""
