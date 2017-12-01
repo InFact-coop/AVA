@@ -24,4 +24,35 @@ heading model =
                 ]
             ]
         , header [ class "bg-dark-teal br2 mh2" ] [ h1 [ class "white f2 ma0 pa2" ] [ text "Make Change" ] ]
+        , div [ class "breadcrumbs mh2 mv3" ]
+            [ span [ class "dark-teal" ] [ text "Home" ]
+            , span [] [ text " / " ]
+            , span [ class "dark-teal" ] [ text "Make Change" ]
+            , span [] [ text <| finalBreadCrumb model.route ]
+            ]
         ]
+
+
+finalBreadCrumb : Route -> String
+finalBreadCrumb route =
+    case route of
+        WelcomeRoute ->
+            " / Welcome"
+
+        IntroRoute ->
+            " / Disclaimer"
+
+        AboutYouRoute ->
+            " / About You"
+
+        JourneyRoute ->
+            " / Your Journey"
+
+        GovernmentRoute ->
+            " / Your Message"
+
+        DisclosureRoute ->
+            " / Disclosure"
+
+        ThanksRoute ->
+            " / Thank You"

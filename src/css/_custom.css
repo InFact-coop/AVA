@@ -67,7 +67,11 @@ button {
   border-color: var(--dark-teal);
 }
 .bg-dark-teal {
-    background-color: var(--dark-teal);
+  background-color: var(--dark-teal);
+}
+
+.dark-teal {
+  color: var(--dark-teal);
 }
 
 .bg-light-teal{
@@ -98,6 +102,7 @@ input:checked + label {
   color: white;
   font-weight: bold;
   border: none;
+}
 
 .checked {
   background: url('./assets/svg/tick.svg');
