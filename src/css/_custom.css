@@ -1,0 +1,126 @@
+/* you can add your own styles in this file */
+
+body {
+  /* the var(--my-variable) syntax is a css variable
+     https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+     they aren't properly supported by all browsers yet so postcss turns them into normal css for you
+  */
+  font-family: var(--sans-serif);
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-teal);
+}
+
+button {
+  font-family: var(--sans-serif);
+}
+
+
+.m0-auto{
+  margin: 0 auto;
+}
+
+.orange-button {
+  background-color: #ed7707;
+  color: white;
+  display: inline-block;
+  border-color: #d1cbcb;
+  border-radius: .125rem;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  margin: 1rem 1rem 1rem 0;
+  float: right;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.gray-button {
+  background-color: var(--dark-gray);
+  color: var(--mid-gray);
+  display: inline-block;
+  border-color: var(--mid-gray);
+  border-radius: .125rem;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  margin: 1rem 1rem 1rem 0;
+  float: right;
+  text-align: center;
+  font-size: 1.25rem;
+  cursor: not-allowed;
+}
+
+.arial {
+  font-family: arial, helvetica, sans-serif;
+}
+
+.burger {
+  background: url('./assets/burger.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: var(--height-2-half);
+}
+
+.b--dark-teal {
+  border-color: var(--dark-teal);
+}
+.bg-dark-teal {
+  background-color: var(--dark-teal);
+}
+
+.dark-teal {
+  color: var(--dark-teal);
+}
+
+.bg-light-teal{
+  background-color: var(--light-teal);
+}
+
+.pv3half {
+  padding-top: var(--spacing-largeish);
+  padding-bottom: var(--spacing-largeish);
+}
+
+.w2half {
+  width: var(--width-2-half);
+};
+
+.ma0-auto{
+  margin: 0 auto;
+}
+
+.question {
+  border: 0;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+
+input:checked + label {
+  background-color: #88347d;
+  color: white;
+}
+
+.checked {
+  background: url('./assets/svg/tick.svg');
+  background-repeat: no-repeat;
+}
+
+.circlehalf {
+  width: 1.3rem;
+  height: 1.3rem;
+  font-size: 1rem;
+  display: inline;
+}
+
+.tooltip {
+  right: 1.5rem;
+  bottom: 3rem;
+  width: 12rem;
+}
+
+
+.testClass{
+  background: pink;
+}
