@@ -3,12 +3,13 @@ module Routes.AboutYou exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Types exposing (..)
+import Components.Help exposing (..)
 
 
 aboutYou : Model -> Html Msg
 aboutYou model =
     div [ class "pa1" ]
-        [ div [ class "pa3 mt3 mb1 dark-gray b f4" ] [ text "Can we 'quote' you?" ]
+        [ div [ class "pa3 mt3 mb1 dark-gray b f4 flex justify-between" ] [ text "Can we 'quote' you?", help model 8 ]
         , div [ class "flex flex-wrap" ]
             [ input [ id "Yes", name "quote", type_ "radio", value "Yes", class "dn" ]
                 []

@@ -1,6 +1,7 @@
 module State exposing (..)
 
 import Types exposing (..)
+import Components.TooltipExtract exposing (..)
 
 
 -- MODEL
@@ -8,9 +9,7 @@ import Types exposing (..)
 
 initModel : Model
 initModel =
-
     { route = WelcomeRoute
-
     , faqs =
         [ ( "Why do we need this information?"
           , "Are you a survivor of domestic violence, sexual violence, harassment, stalking or another form of violence against women and girls? You are not alone. Violence against women and girls affects more than 1 in 4 women in the UK at some point in their lives. We believe that many women could be saved a lot of suffering if they are able to find the right help and support at the right time. AVA works to improve the services and support available to women facing violence and abuse. To do this we need your help. Sharing your experiences of the help and support that did and didn’t work for you will help us ensure that we are representing the needs of real women when we talk to government and service providers"
@@ -26,6 +25,25 @@ initModel =
           )
         ]
     , acceptQuiz = False
+    , tooltips =
+        [ ( 1, "This can be formal services and support like the police, social services, a doctor, helpines or local women’s services or informal support from friends, family, neighbours or someone like your hairdresser.", False )
+        , ( 2
+          , "Please tell us who helped you and how they were helpful."
+          , False
+          )
+        , ( 3
+          , "Please tell us who did not help you and why they were unhelpful."
+          , False
+          )
+        , ( 4, "Please tell us who would you have liked to have got help from and what kind of support would have helped more?", False )
+        , ( 5, "Please select as many of the buttons below to tell us a bit more about the challenges you faced.", False )
+        , ( 6, "Please use this space if you want to tell us anything else you want to about your experience.", False )
+        , ( 7, "It is also powerful to have direct asks when we are trying to influence policy", False )
+        , ( 8, "We use quotes from real women when talking to government and services as they add to the truth and impact of what we are saying. We would make sure that you could not be identified through any quotes we used.", False )
+        , ( 9, "Your answers to these questions will help us use your experiences alongside those of other women. Please choose an option from each of the questions below. They all include a ‘Prefer not to say’ option to select if you would rather not answer a particular question. Many questions also include an ‘other - please specify’ option which enables you to type in an answer if none of the options given apply to you.", False )
+        , ( 10, "We send our newsletter out with regular updates which cover what we are doing, the training we offer, jobs and opportunities and news about violence against women and girls in the UK.", False )
+        , ( 11, "Would you like to continue to be involved in our work to create positive change for women facing violence and abuse in the UK? Then become part of our expert by experience network so that you can carry on influencing our work through polls and surveys. As an expert by experience, we will only ever contact you by email and it will be no more than once a month.", False )
+        ]
     }
 
 
@@ -72,6 +90,17 @@ update msg model =
 
         ShowAnswer qatuple ->
             ( { model | faqs = List.map (\n -> findToggledQa n qatuple) model.faqs }, Cmd.none )
+
+        ToggleTooltip ( int, tool, isToggled ) ->
+            ( { model | tooltips = List.map (\n -> restructureTooltipList n ( int, tool, isToggled )) model.tooltips }, Cmd.none )
+
+
+restructureTooltipList : Tooltip -> Tooltip -> Tooltip
+restructureTooltipList ( mappedId, mappedtt, mappedtoggle ) ( selectedId, selectedtt, selectedtoggle ) =
+    if mappedId == selectedId then
+        ( mappedId, mappedtt, not selectedtoggle )
+    else
+        ( mappedId, mappedtt, False )
 
 
 findToggledQa : ( String, String, Bool ) -> ( String, String, Bool ) -> ( String, String, Bool )

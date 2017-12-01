@@ -16,10 +16,15 @@ type Route
     | ThanksRoute
 
 
+type alias Tooltip =
+    ( Int, String, Bool )
+
+
 type alias Model =
     { route : Route
     , acceptQuiz : Bool
     , faqs : List ( String, String, Bool )
+    , tooltips : List Tooltip
     }
 
 
@@ -31,3 +36,4 @@ type Msg
     = UrlChange Navigation.Location
     | ShowAnswer ( String, String, Bool )
     | AcceptQuiz Bool
+    | ToggleTooltip Tooltip
