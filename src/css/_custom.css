@@ -106,16 +106,3 @@ input:checked + label {
   background: url('./assets/svg/tick.svg');
   background-repeat: no-repeat;
 }
-
-.circlehalf {
-  width: 1.3rem;
-  height: 1.3rem;
-  font-size: 1rem;
-  display: inline;
-}
-
-.tooltip {
-  right: 1.5rem;
-  bottom: 3rem;
-  width: 12rem;
-}

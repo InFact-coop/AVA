@@ -3,13 +3,12 @@ module Routes.Journey exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Types exposing (..)
-import Components.Help exposing (..)
 
 
 journey : Model -> Html Msg
 journey model =
     div [ class "mh2" ]
-        [ div [ class "pa1 mt4 dark-gray b f4 flex" ] [ text "Who did you go to for help?", help model 1 ]
+        [ div [ class "pa1 mt4  dark-gray b f4" ] [ text "Who did you go to for help?" ]
         , div [ class "flex flex-wrap" ]
             [ input [ class "dn", id "none", name "who", type_ "checkbox", value "none" ]
                 []
@@ -57,23 +56,23 @@ journey model =
             , input [ name "Other", placeholder "Please write here", type_ "text", class "ba b--mid-gray f5 ml2 pa1" ]
                 []
             ]
-        , div [ class "pa1 mt4 dark-gray b f4 flex" ] [ text "Who did you find helpful and why?", help model 2 ]
+        , div [ class "pa1 mt4  dark-gray b f4" ] [ text "Who did you find helpful and why?" ]
         , div [ class "flex justify-center mt3 mb3 vh-20" ]
             [ textarea [ class "bg-light-gray ba b--mid-gray w-90 h4", placeholder "Who did you find helpful and why?" ]
                 []
             ]
-        , div [ class "pa1 mt4 dark-gray b f4 flex" ] [ text "Who did you find unhelpful and why?", help model 3 ]
+        , div [ class "pa1 mt4  dark-gray b f4" ] [ text "Who did you find unhelpful and why?" ]
         , div [ class "flex justify-center mt3 mb3 vh-20" ]
             [ textarea [ class "bg-light-gray ba b--mid-gray w-90 h4", placeholder "Who did you find unhelpful and why?" ]
                 []
             ]
-        , div [ class "pa1 mt4 dark-gray b f4 flex" ] [ text "What other help would you have liked?", help model 4 ]
+        , div [ class "pa1 mt4  dark-gray b f4" ] [ text "What other help would you have liked?" ]
         , div [ class "flex justify-center mt3 mb3 vh-20" ]
             [ textarea [ class "bg-light-gray ba b--mid-gray w-90 h4", placeholder "What other help would you have liked?" ]
                 []
             ]
         , div
-            [ class "pa1 mt4  dark-gray b f4 flex" ]
+            [ class "pa1 mt4 dark-gray b f4 flex" ]
             [ text "A bit more about your experience", help model 5 ]
         , div [ class "flex flex-wrap br2 pa1 mh2" ]
             [ input [ class "dn", id "prostitution", name "tags", type_ "checkbox", value "prostitution" ]
@@ -135,7 +134,7 @@ journey model =
             , label [ class "bg-white flex items-center bg-white pt2 pb2 pl3 pr3 pointer ba b--mid-gray br1 ma2 h1 h-auto", for "pregnant" ]
                 [ text "Pregnant while facing abuse" ]
             ]
-        , div [ class "pa1 mt4 dark-gray b f4 flex" ] [ text "Anything else you want to tell us?", help model 6 ]
+        , div [ class "pa1 mt4  dark-gray b f4" ] [ text "Anything else you want to tell us?" ]
         , div [ class "flex justify-center mt3 mb3 vh-20 h4" ]
             [ textarea [ class "bg-light-gray ba b--mid-gray w-90", placeholder "Please write here" ]
                 []
