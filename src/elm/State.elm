@@ -8,7 +8,7 @@ import Types exposing (..)
 
 initModel : Model
 initModel =
-    { route = WelcomeRoute
+    { route = AboutYouRoute
     , faqs =
         [ ( "Why do we need this information?"
           , "Are you a survivor of domestic violence, sexual violence, harassment, stalking or another form of violence against women and girls? You are not alone. Violence against women and girls affects more than 1 in 4 women in the UK at some point in their lives. We believe that many women could be saved a lot of suffering if they are able to find the right help and support at the right time. AVA works to improve the services and support available to women facing violence and abuse. To do this we need your help. Sharing your experiences of the help and support that did and didn’t work for you will help us ensure that we are representing the needs of real women when we talk to government and service providers"
