@@ -36,5 +36,5 @@ government model =
             , label [ for "no", class "bg-white pa2 pl4 pr4 tc pointer br bt bb b--mid-gray mw4 br--right br1" ]
                 [ text "No " ]
             ]
-        , a [ class "orange-button", href "#thanks" ] [ text "next" ]
+        , a [ class "orange-button", href "#aboutYou" ] [ text "next" ]
         ]
