@@ -15,7 +15,7 @@ welcome model =
             ]
         , div [ class "bg-light-gray pa3" ]
             [ div [ class "br1 pa3 bg-light-gray b tc dark-gray" ]
-                [ text "I am a survivor and I want to make a change." ]
+                [ text "I am a survivor and want positive change to help women facing violence and abuse." ]
             , div [ class "br1 tc w2 h2 bg-white m0-auto ba b--mid-gray flex pa1" ]
                 [ div [ class <| "h4 w4 " ++ toggleCheck model.acceptQuiz, onClick (AcceptQuiz model.acceptQuiz) ]
                     []
