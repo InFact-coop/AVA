@@ -9,6 +9,7 @@ import Types exposing (..)
 
 intro : Model -> Html Msg
 intro model =
+
     div [ class "pa1" ]
         [ div [ class "pa3 mt3 mb2 dark-gray b f4 tc" ] [ text "Sharing your experience will help us make a positive change to women and girls facing violence and abuse" ]
         , div [ class "m2 center" ]

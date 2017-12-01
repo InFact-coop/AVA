@@ -67,7 +67,11 @@ button {
   border-color: var(--dark-teal);
 }
 .bg-dark-teal {
-    background-color: var(--dark-teal);
+  background-color: var(--dark-teal);
+}
+
+.dark-teal {
+  color: var(--dark-teal);
 }
 
 .bg-light-teal{
