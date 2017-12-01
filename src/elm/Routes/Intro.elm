@@ -12,5 +12,5 @@ intro model =
     div [ class "m2 center" ]
         [ iframe [ src "https://www.youtube-nocookie.com/embed/VGrBCs_EbZU", class "center db mh2" ] []
         , accordion model
-        , button [ class "orange-button" ] [ text "Let's go" ]
+        , a [ class "orange-button", href "#journey" ] [ text "Let's go" ]
         ]
