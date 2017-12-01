@@ -1,5 +1,6 @@
 module Routes.Journey exposing (..)
 
+import Components.Help exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Types exposing (..)
@@ -72,8 +73,9 @@ journey model =
                 []
             ]
         , div
-            [ class "pa1 mt4  dark-gray b f4" ]
-            [ text "A bit more about your experience" ]
+
+            [ class "pa1 mt4  dark-gray b f4 flex" ]
+            [ text "A bit more about your experience", help model 5 ]
         , div [ class "flex flex-wrap br2 pa1 mh2" ]
             [ input [ class "dn", id "prostitution", name "tags", type_ "checkbox", value "prostitution" ]
                 []
