@@ -11,7 +11,6 @@ journey model =
     div [ class "mh2" ]
         [ div [ class "pa1 mt4 dark-gray b f4 flex" ] [ text "Who did you go to for help?", help model 1 ]
         , div [ class "flex flex-wrap" ]
-
             [ input [ class "dn", id "none", name "who", type_ "checkbox", value "none" ]
                 []
             , label [ class "bg-white flex items-center bg-white pt2 pb2 pl3 pr3 pointer ba b--mid-gray mw4 br1 ma2 h1", for "none" ]
@@ -76,7 +75,7 @@ journey model =
         , div
             [ class "pa1 mt4  dark-gray b f4 flex" ]
             [ text "A bit more about your experience", help model 5 ]
-        , div [ class "flex flex-wrap bg-light-gray br2 pa1 mh2" ]
+        , div [ class "flex flex-wrap br2 pa1 mh2" ]
             [ input [ class "dn", id "prostitution", name "tags", type_ "checkbox", value "prostitution" ]
                 []
             , label [ class "bg-white flex items-center bg-white pt2 pb2 pl3 pr3 pointer ba b--mid-gray mw4 br1 ma2 h1", for "prostitution" ]
