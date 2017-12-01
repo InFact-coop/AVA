@@ -8,7 +8,7 @@ import Types exposing (..)
 
 initModel : Model
 initModel =
-    { route = WelcomeRoute
+    { route = AboutYouRoute
     , faqs =
         [ ( "Why do we need this information?"
           , "We are looking for for testimonies that reflect the diversity of Britain today. We hope to take your messages to Parliament when they discuss the DV Bill later this year"
