@@ -24,6 +24,7 @@ government model =
             [ textarea [ class "bg-light-gray ba b--mid-gray w-90", placeholder "Please tell us your message here" ]
                 []
             ]
+
         , div [ class "pa3 mt3 mb1 dark-gray b f4" ]
             [ text "Are you happy if your journey or message is shared?" ]
         , div [ class "ml3 mt3 mb3" ]
