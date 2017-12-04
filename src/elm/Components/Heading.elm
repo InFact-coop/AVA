@@ -9,7 +9,7 @@ import Types exposing (..)
 heading : Model -> Html Msg
 heading model =
     section [ class "header" ]
-        [ div [ class "bg-dark-gray arial tc white b pv1" ] [ text "LEAVE SITE NOW >>" ]
+        [ div [ class "bg-dark-gray arial tc white b pv1" ] [ a [ class "white", href "http://www.bbc.co.uk/news" ] [ text "LEAVE SITE NOW >>" ] ]
         , div [ class "bg-light-gray pa2" ]
             [ purpleButton model "I need help"
             , purpleButton model "Contact us"
