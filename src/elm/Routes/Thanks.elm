@@ -20,7 +20,7 @@ thanks model =
                 ]
             ]
         , div [ class "flex flex-wrap justify-center items-center" ]
-            [ a [ class "bg-light-teal white pa3 ma2 w-40 tc br1 h4 flex items-center db", href "https://avaproject.org.uk/" ] [ text "Sign up to email newsletter?" ]
+            [ a [ class "bg-light-teal white pa3 ma2 w-40 tc br1 h4 flex items-center db", href "https://avaproject.org.uk/newsletter-sign-up/" ] [ text "Sign up to email newsletter?" ]
             , a [ class "bg-light-teal white pa3 ma2 w-40 tc br1 h4 flex items-center db", href "https://avaproject.org.uk/" ] [ text "Join our expert by experience network" ]
             , a [ class "bg-light-teal white pa3 ma2 w-40 tc br1 h4 flex items-center db", href "https://avaproject.org.uk/about/contact-us/" ] [ text "Get in touch with us at AVA" ]
             , a [ class "bg-light-teal white pa3 ma2 w-40 tc br1 h4 flex items-center db", href "https://avaproject.org.uk/need-help/" ] [ text "Do you need help or support?" ]

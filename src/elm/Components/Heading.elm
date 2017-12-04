@@ -9,13 +9,13 @@ import Types exposing (..)
 heading : Model -> Html Msg
 heading model =
     section [ class "header" ]
-        [ div [ class "bg-dark-gray arial tc white b pv1" ] [ text "LEAVE SITE NOW >>" ]
+        [ div [ class "bg-dark-gray arial tc white b pv1" ] [ a [ class "white", href "http://www.bbc.co.uk/news" ] [ text "LEAVE SITE NOW >>" ] ]
         , div [ class "bg-light-gray pa2" ]
             [ purpleButton model "I need help"
             , purpleButton model "Contact us"
             ]
         , div [ class "branding pv3 flex justify-between items-center" ]
-            [ img [ class "h3 dib ml2", src "./assets/brand.jpg", alt "AVA" ] []
+            [ img [ class "h3 dib ml2", src "./assets/avaWithTag.jpg", alt "AVA" ] []
             , div [ class "" ]
                 [ span [ class "v-mid mr2" ] [ text "MENU" ]
                 , div
