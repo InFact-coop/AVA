@@ -1,25 +1,23 @@
 module Routes.AboutYou exposing (..)
 
+import Components.Help exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Types exposing (..)
-import Components.Help exposing (..)
 
 
 aboutYou : Model -> Html Msg
 aboutYou model =
     div [ class "pa1" ]
-
         [ div [ class "pa2 dark-gray b f4 flex justify-between" ] [ text "Can we 'quote' you?", help model 8 ]
-
         , div [ class "flex flex-wrap" ]
-            [ input [ id "Yes", name "quote", type_ "radio", value "Yes", class "dn" ]
+            [ input [ id "YesQuote", name "quoteYesNo", type_ "radio", value "YesQuote", class "dn" ]
                 []
-            , label [ for "Yes", class "bg-white pa2 pl4 pr4 pointer ba b--mid-gray mw4 br--left br1 tc ml2" ]
+            , label [ for "YesQuote", class "bg-white pa2 pl4 pr4 pointer ba b--mid-gray mw4 br--left br1 tc ml2" ]
                 [ text "Yes" ]
-            , input [ id "No", name "quote", type_ "radio", value "No", class "dn" ]
+            , input [ id "NoQuote", name "quoteYesNo", type_ "radio", value "NoQuote", class "dn" ]
                 []
-            , label [ for "No", class "bg-white pa2 pl4 pr4 pointer ba b--mid-gray mw4 br--right br1 tc" ]
+            , label [ for "NoQuote", class "bg-white pa2 pl4 pr4 pointer ba b--mid-gray mw4 br--right br1 tc" ]
                 [ text "No" ]
             ]
         , div [ class "pa1 mt4  dark-gray b f4" ] [ text "What is your age Group?" ]
