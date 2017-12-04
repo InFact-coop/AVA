@@ -15,7 +15,7 @@ heading model =
             , purpleButton model "Contact us"
             ]
         , div [ class "branding pv3 flex justify-between items-center" ]
-            [ img [ class "h3 dib ml2", src "./assets/brand.jpg", alt "AVA" ] []
+            [ img [ class "h3 dib ml2", src "./assets/avaWithTag.jpg", alt "AVA" ] []
             , div [ class "" ]
                 [ span [ class "v-mid mr2" ] [ text "MENU" ]
                 , div

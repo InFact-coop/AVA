@@ -1,7 +1,7 @@
 module State exposing (..)
 
-import Types exposing (..)
 import Components.TooltipExtract exposing (..)
+import Types exposing (..)
 
 
 -- MODEL
@@ -43,6 +43,7 @@ initModel =
         , ( 9, "Your answers to these questions will help us use your experiences alongside those of other women. Please choose an option from each of the questions below. They all include a ‘Prefer not to say’ option to select if you would rather not answer a particular question. Many questions also include an ‘other - please specify’ option which enables you to type in an answer if none of the options given apply to you.", False )
         , ( 10, "We send our newsletter out with regular updates which cover what we are doing, the training we offer, jobs and opportunities and news about violence against women and girls in the UK.", False )
         , ( 11, "Would you like to continue to be involved in our work to create positive change for women facing violence and abuse in the UK? Then become part of our expert by experience network so that you can carry on influencing our work through polls and surveys. As an expert by experience, we will only ever contact you by email and it will be no more than once a month.", False )
+        , ( 12, "Your answers to these questions will help us use your experiences alongside those of other women. Please choose an option from each of the questions below. They all include a ‘Prefer not to say’ option to select if you would rather not answer a particular question. Many questions also include an ‘other - please specify’ option which enables you to type in an answer if none of the options given apply to you.", False )
         ]
     }
 
